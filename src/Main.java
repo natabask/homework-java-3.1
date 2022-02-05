@@ -1,14 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-
-        //Переменные
-        int ticketPrice = 20_000;
-        int milePrice = 20;
-
-        //Вычисления
-        int bonusMiles = ticketPrice / milePrice;
-
+        // Создание объекта
+        BonusMilesService service = new BonusMilesService();
+        // Переменные
+        int price = 20_000;
+        // Вызов метода calculate
+        int miles = service.calculate(price);
         //Вывод результата
-        System.out.println("За билет стоимостью " + ticketPrice + " рублей Вам начислено " + bonusMiles + " бонусных миль. Летайте с Аэрофлотом!");
+        System.out.println("За билет стоимостью " + price + " рублей Вам начислено " + miles + " бонусных миль.");
     }
 }
